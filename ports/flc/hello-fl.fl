@@ -1,0 +1,11 @@
+function(noreturn, keep) unreachable() -> void {
+	prints("Reached unreachable code!");
+	exit(1);
+}
+
+function(external) puts(str code) -> void;
+
+function spark(int argc, str[] argv) -> int {
+    puts("Hello world!");
+    return 0;
+}
