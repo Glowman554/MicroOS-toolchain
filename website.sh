@@ -5,9 +5,9 @@ source tools/filething.sh
 UPLOAD_SERVER="https://filething.toxicfox.de"
 UPLOAD_AUTH_TOKEN="$MICROOS_UPLOAD_TOKEN"
 
-INITRD=https://filething.toxicfox.de/files/22d6677c-9d10-4d35-ada2-f562c1a4035e.saf
-KERNEL=https://filething.toxicfox.de/files/62e23d28-deb3-4f6c-9725-4165f1a61e55.elf
-SYMBOLS=https://filething.toxicfox.de/files/27fda2bd-cd15-4df2-a602-8afa3bca096c.syms
+INITRD=https://filething.toxicfox.de/files/384c795c-68f0-4d65-9ab9-4568f54c0a21.saf
+KERNEL=https://filething.toxicfox.de/files/034c0e85-e46c-400f-842a-465e55b50da4.elf
+SYMBOLS=https://filething.toxicfox.de/files/1a24effb-eb08-4f31-944b-16d5669b301a.syms
 
 bash inject.sh $INITRD
 

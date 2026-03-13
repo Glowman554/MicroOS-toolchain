@@ -23,3 +23,4 @@ fi
 
 cp src/build/debug/mujs $BIN
 cp src/build/debug/mujs-pp $BIN
+cp hello-mujs.js $OPT
