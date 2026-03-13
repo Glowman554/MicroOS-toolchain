@@ -40,3 +40,17 @@ jobs:
 
       - name: release
         run: MICROOS_BUILD_TOKEN=${{ secrets.MICROOS_BUILD_TOKEN }} MICROOS_UPLOAD_TOKEN=${{ secrets.MICROOS_UPLOAD_TOKEN }} bash website.sh
+
+      - name: Package toolchain
+        run: tar -czf toolchain.tar.gz .toolchain
+
+      - name: Upload toolchain to release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: toolchain-latest
+          name: Toolchain
+          body: Pre-built i686-microos cross-compilation toolchain
+          files: toolchain.tar.gz
+          make_latest: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
