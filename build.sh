@@ -14,7 +14,9 @@ function build() {
     echo "Building $1..."
     (
         cd ports/$1
-        bash build.sh $TOOLCHAIN $BIN $OPT
+        OPT_LOCAL=$(realpath $OPT/$1)
+        mkdir -p $OPT_LOCAL
+        bash build.sh $TOOLCHAIN $BIN $OPT_LOCAL
     )
 }
 
@@ -24,4 +26,5 @@ function build() {
     build mujs
     build lua
     build flc
+    build jvm
 )

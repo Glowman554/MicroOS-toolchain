@@ -24,7 +24,10 @@ jobs:
             build-essential bison flex libgmp-dev libmpc-dev libmpfr-dev \
             texinfo wget curl git xorriso autoconf automake \
             libtool pkg-config
-
+      - name: Setup github
+        run: |
+          git config --global user.email "vossjanick62@gmail.com"
+          git config --global user.name "Glowman554"
       - name: Cache toolchain
         uses: actions/cache@v4
         with:

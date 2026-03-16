@@ -14,6 +14,7 @@ function clean() {
     clean mujs
     clean lua
     clean flc
+    clean jvm
 )
 
 rm -rf output
